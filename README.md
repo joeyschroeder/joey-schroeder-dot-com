@@ -3,6 +3,8 @@
 
 An application using [Preact](https://github.com/developit/preact) and [Webpack](https://github.com/webpack/webpack).
 
+[![JoeySchroeder.com](https://i.imgur.com/P4De99k.gif)](http://joeyschroeder.com)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
@@ -21,19 +23,19 @@ First, you'll need to clone this repo to your working directory on your local ma
 1. Open your command line.
 2. Navigate to your working directory.
 3. Clone this repo to your working directory.
-4. Navigate inside the ride-or-die-app directory.
+4. Navigate inside the joey-schroeder-dot-com directory.
 5. Install the dependencies.
 
 ```
 cd /path/to/working/directory
 hg clone github.com/joeyschroeder/joey-schroeder-dot-com
-cd /preact-webpack-starter
+cd /joey-schroeder-dot-com
 npm install
 ```
 
 ## Development
 
-During development you can use simulators with live reloading to run the application.
+During development you can start the app using `npm run start`.  This will begin running the app at a specificed local server (typically localhost:8100/).  You can then view the app in any web browser or browser simulator.  Any time you make a change to the `src` folder while the app is running, the app will automatically refresh in your browser.
 
 ```
 npm run start
@@ -41,7 +43,7 @@ npm run start
 
 ## Deployment
 
-Explain what these tests test and why
+After completing development you can run `npm run build`.  This will minifiy and compile the `src` folder into a `public` folder.  The contents of the `public` folder can be uploaded to a web server for hosting.
 
 ```
 npm run build
