@@ -1,0 +1,46 @@
+@import 'variables';
+
+* {
+    -webkit-font-smoothing: antialiased;
+}
+
+html {
+    box-sizing: border-box;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    width: 100vw;
+
+    ::selection {
+        background: $color-primary;
+        color: $color-white;
+        text-shadow: none;
+    }
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+
+button {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    display: inline;
+    font: inherit;
+    outline: 0;
+    padding: 0;
+
+    &:active,
+    &:focus,
+    &:hover {
+        outline: 0;
+    }
+}

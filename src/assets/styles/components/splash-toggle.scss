@@ -1,0 +1,68 @@
+$component-class: splash__toggle;
+
+@keyframes splashTogglePulse {
+    0%,
+    30%,
+    100% {
+        transform: scale(0.7);
+    }
+
+    15% {
+        transform: scale(1.1);
+    }
+}
+
+.#{$component-class} {
+    position: absolute;
+    top: $spacer * 1.5;
+    right: $spacer * 1.5;
+    transition-property: opacity;
+    transition-duration: $duration-base * 2;
+    transition-delay: $duration-base * 2;
+    transition-timing-function: ease;
+    opacity: 0;
+
+    .#{$class-app-ready} & {
+        opacity: 1;
+    }
+
+    span {
+        align-items: center;
+        animation-duration: $duration-base * 10;
+        animation-iteration-count: infinite;
+        animation-name: splashTogglePulse;
+        animation-timing-function: ease-in-out;
+        display: flex;
+        float: left;
+        height: $spacer * 1.5;
+        justify-content: center;
+        position: relative;
+        width: $spacer * 2;
+
+        @for $i from 1 through 3 {
+            &:nth-child(#{$i}) {
+                animation-delay: $i * $duration-base / 3;
+            }
+        }
+
+        &::after {
+            border-radius: 100%;
+            content: '';
+            height: $spacer;
+            position: absolute;
+            width: $spacer;
+        }
+
+        &:nth-child(1)::after {
+            background: $color-stripe-3;
+        }
+
+        &:nth-child(2)::after {
+            background: $color-stripe-2;
+        }
+
+        &:nth-child(3)::after {
+            background: $color-stripe-1;
+        }
+    }
+}
