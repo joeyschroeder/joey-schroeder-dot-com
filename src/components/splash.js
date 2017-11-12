@@ -1,4 +1,4 @@
-import { Component, h } from 'preact';
+import React, { Component } from 'react';
 
 import PropTypes from 'prop-types';
 import { SplashToggle } from './splash-toggle';
@@ -35,5 +35,5 @@ export class Splash extends Component {
 }
 
 Splash.propTypes = {
-    toggleSideBar: PropTypes.func
+    toggleSidebar: PropTypes.func
 };

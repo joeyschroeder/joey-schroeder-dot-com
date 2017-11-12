@@ -1,9 +1,9 @@
-import { Component, h } from 'preact';
+import React, { Component } from 'react';
 
 import { Sidebar } from './sidebar';
 import { Splash } from './splash';
 
-export default class App extends Component {
+export class App extends Component {
 
     constructor(props) {
         super(props);

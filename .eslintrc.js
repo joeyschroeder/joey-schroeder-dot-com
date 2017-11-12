@@ -7,36 +7,22 @@ module.exports = {
   },
   "plugins": ["react"],
   "parser": "babel-eslint",
-  "extends": ["eslint:recommended",  "standard-preact"],
+  "extends": ["eslint:recommended",  "standard-react"],
   "parserOptions": {
-      "sourceType": "module",
       "allowImportExportEverywhere": true,
-      "ecmaFeatures": {
-          "jsx": true,
-      }
+      "ecmaFeatures": { "jsx": true },
+      "sourceType": "module"
   },
   "rules": {
     "comma-dangle": 0,
-    "indent": [
-      "error",
-      4,
-    ],
-    "react/jsx-indent": 0,
-    "linebreak-style": [
-      "error",
-      "unix",
-    ],
-    "quotes": [
-      "error",
-      "single",
-    ],
-    "semi": [
-      "error",
-      "always",
-    ],
-    "no-unused-vars": [
-      "warn",
-    ],
+    "indent": [ "warn", 4 ],
+    "linebreak-style": [ "error", "unix" ],
     "no-console": 0,
+    "no-unused-vars": [ "warn" ],
+    "quotes": [ "error", "single" ],
+    "react/jsx-indent": 0,
+    "react/jsx-indent-props": 0,
+    "react/no-unused-prop-types": 1,
+    "semi": [ "error", "always" ]
   },
 };

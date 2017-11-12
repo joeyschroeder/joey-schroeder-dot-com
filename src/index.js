@@ -1,10 +1,13 @@
-import { h, render } from 'preact';
+import { App } from './components/app';
+import { AppContainer } from 'react-hot-loader';
+import React from 'react';
+import { render } from 'react-dom';
 
-import App from './components/app';
+const init = () => render(
+    <AppContainer><App /></AppContainer>,
+    document.getElementById('app')
+);
 
-let root;
-const init = () => root = render(<App />, document.getElementById('app'), root);
-
-if (module.hot) module.hot.accept('./components/app', () => requestAnimationFrame(init));
+if (module.hot) module.hot.accept();
 
 init();

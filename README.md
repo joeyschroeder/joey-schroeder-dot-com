@@ -1,7 +1,7 @@
 # Joey Schroeder's Online Résumé
 [![Breadbox.io](http://i.imgur.com/vAw3l8H.png)](http://breadbox.io)
 
-An application using [Preact](https://github.com/developit/preact) and [Webpack](https://github.com/webpack/webpack).
+An application using [React](https://reactjs.org/) and [Webpack](https://github.com/webpack/webpack).
 
 [![JoeySchroeder.com](https://i.imgur.com/P4De99k.gif)](http://joeyschroeder.com)
 
@@ -51,7 +51,7 @@ npm run build
 
 ## Built With
 
-* [Preact](https://github.com/developit/preact) - A 3kb React alternative with the same ES6 API
+* [React](https://reactjs.org/) - A JavaScript library for building user interfaces
 * [Webpack](https://github.com/webpack/webpack) - A JavaScript module bundler
 
 ## Authors
