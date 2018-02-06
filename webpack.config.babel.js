@@ -1,5 +1,5 @@
 import clean from './webpack/clean';
-import copyPDFs from './webpack/copy-pdfs';
+import copyStaticAssets from './webpack/copy-pdfs';
 import devServer from './webpack/dev-server';
 import extractSCSS from './webpack/extract-scss';
 import generateFavicons from './webpack/generate-favicons';
@@ -27,7 +27,7 @@ const ROOT_PATHS = {
 const PATHS = {
     fonts: path.join(ROOT_PATHS.src, 'assets/fonts'),
     images: path.join(ROOT_PATHS.src, 'assets/images'),
-    pdfs: path.join(__dirname, 'pdfs'),
+    static_assets: path.join(__dirname, 'static'),
     styles: [
         path.join(ROOT_PATHS.src, 'assets/styles', 'critical.scss'),
         path.join(ROOT_PATHS.src, 'assets/styles', 'index.scss')
@@ -92,8 +92,8 @@ export default function(env) {
             minifyJavascript({ useSourceMap: false }),
             extractSCSS(PATHS.style),
             // purifyCSS([ROOT_PATHS.src]),
-            copyPDFs({
-                sourcePath: PATHS.pdfs,
+            copyStaticAssets({
+                sourcePath: PATHS.static_assets,
                 destPath: ROOT_PATHS.public
             })
         ]);
