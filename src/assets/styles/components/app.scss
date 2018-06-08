@@ -6,4 +6,9 @@ $component-selector: app;
     position: fixed;
     top: 0;
     width: 100%;
+
+    ::selection {
+        background: $color-stripe-2;
+        color: $color-white;
+    }
 }

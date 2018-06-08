@@ -2860,6 +2860,9 @@ html {
   position: fixed;
   top: 0;
   width: 100%; }
+  .app ::selection {
+    background: #fe672e;
+    color: #fff; }
 
 body {
   font-family: "Brovoto Condensed", arial, sans-serif;
@@ -2940,7 +2943,7 @@ body {
   height: 100%;
   justify-content: center;
   left: 0;
-  overflow: hidden;
+  overflow-y: auto;
   position: absolute;
   top: 0;
   width: 50%;
@@ -2956,9 +2959,11 @@ body {
     .sidebar nav a,
     .sidebar nav button {
       border-bottom: 0.1rem solid black;
+      box-sizing: border-box;
       color: #f7f3ed;
-      display: block;
+      display: flex;
       font-weight: 200;
+      justify-content: flex-start;
       opacity: 0;
       padding: 2rem;
       text-align: left;
@@ -3015,9 +3020,20 @@ body {
       .sidebar nav a:nth-child(4),
       .sidebar nav button:nth-child(4) {
         border-color: #febe26; }
+      .sidebar nav a:nth-child(5), .sidebar nav a:nth-child(6),
+      .sidebar nav button:nth-child(5),
+      .sidebar nav button:nth-child(6) {
+        border-color: #febe26; }
     .sidebar nav i {
       width: 3rem;
       text-align: center; }
+    .sidebar nav span {
+      flex: 3;
+      flex-wrap: wrap; }
+    @media screen and (max-width: 640px) {
+      .sidebar nav {
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch; } }
 
 .splash {
   align-items: center;
