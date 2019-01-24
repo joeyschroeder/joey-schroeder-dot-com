@@ -1,15 +1,10 @@
-
 {
-  "sourceMaps": true,
   "presets": [
-    ["env", {
-      "targets": { "browsers": ["last 2 versions"] },
-      "loose" : true
-    }],
-    "react",
-    "stage-0"
+    "@babel/preset-env",
+    "@babel/preset-react"
   ],
   "plugins": [
-    ["react-hot-loader/babel"]
+    "react-hot-loader/babel",
+    "@babel/plugin-proposal-class-properties"
   ]
 }

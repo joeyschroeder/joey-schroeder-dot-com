@@ -1,13 +1,21 @@
-import { App } from './components/app';
 import { AppContainer } from 'react-hot-loader';
 import React from 'react';
+import { Root } from './components/root/root';
 import { render } from 'react-dom';
 
-const init = () => render(
-    <AppContainer><App /></AppContainer>,
+const init = Component =>
+  render(
+    <AppContainer>
+      <Component />
+    </AppContainer>,
     document.getElementById('app')
-);
+  );
 
-if (module.hot) module.hot.accept();
+init(Root);
 
-init();
+if (module.hot) {
+  module.hot.accept('./components/root/root', () => {
+    const nextRoot = require('./components/root/root').Root;
+    init(nextRoot);
+  });
+}

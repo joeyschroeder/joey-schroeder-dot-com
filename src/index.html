@@ -1,67 +1,52 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-        <meta name="description" content="Joey Schroeder is a developer and graphic artist with nearly a decade’s worth of experience and a genuine excitement for design and development.">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 
-        <meta property="og:description" content="Joey Schroeder is a developer and graphic artist with nearly a decade’s worth of experience and a genuine excitement for design and development.">
-        <meta property="og:site_name" content="JoeySchroeder.com">
-        <meta property="og:title" content="JoeySchroeder.com">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="http://joeyschroeder.com">
+  <meta name="description" content="Joey Schroeder is a mobile and web application developer and designer.  With over a decade's worth of experience, Joey Schroeder's passion for continued learning is rivaled only by his passion for teaching.">
 
-        <link rel="canonical" href="http://joeyschroeder.com">
-        <title>Joey Schroeder | Developer &amp; Designer</title>
-    </head>
-    <body>
-        <div id="app"></div>
-        <div id="pre-bootstrap-container">
-            <script type="text/javascript">
-                const appReadyClass = 'app-ready';
-                const body = document.getElementsByTagName('body')[0];
-                const inlinedStyles = document.getElementsByTagName('style')[0];
-                const preBootstrapContainer = document.getElementById('pre-bootstrap-container');
+  <meta property="og:description" content="Joey Schroeder is a mobile and web application developer and designer.  With over a decade's worth of experience, Joey Schroeder's passion for continued learning is rivaled only by his passion for teaching.">
+  <meta property="og:site_name" content="Joey Schroeder">
+  <meta property="og:title" content="Joey Schroeder">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://joeyschroeder.com">
 
-                const handleAppReady = event => {
-                    setTimeout(() => {
-                        body.className = appReadyClass; // add app-ready class after timeout to trigger animations
-                    }, 100);
+  <link rel="canonical" href="http://joeyschroeder.com">
+  <title>Joey Schroeder | Developer &amp; Designer</title>
+</head>
 
-                    setTimeout(() => {
-                        preBootstrapContainer.remove(); // remove pre bootstrap content;
-                        if (inlinedStyles) inlinedStyles.remove(); // remove inlined styles so they don't conflict;
-                    }, 900);
-                }
+<body>
+  <div id="app"></div>
+  <div id="pre-bootstrap-container">
+    <script type="text/javascript">
+      const appReadyClass = 'app-ready';
+      const body = document.getElementsByTagName('body')[0];
+      const inlinedStyles = document.getElementsByTagName('style')[0];
+      const preBootstrapContainer = document.getElementById('pre-bootstrap-container');
 
-                // Listen for the "appReady" event, which will be emitted by the app.js when component mounts
-                // and bubble up (as far as we know) to the document root.
-                document.addEventListener('appReady' , handleAppReady);
-            </script>
-            <nav style="display: none;">
-                <a href="https://www.linkedin.com/in/joeyschroeder" target="_blank">LinkedIn</a>
-                <a href="https://github.com/joeyschroeder" target="_blank">GitHub</a>
-                <a href="https://joeyschroeder.bandcamp.com" target="_blank">Bandcamp</a>
-            </nav>
-            <div style="display: none;">
-                <a href="https://theapacherevolver.bandcamp.com/" target="_blank" title="Joey Schroeder The Midwinter"><img src="./static/joey-schroeder-music-apache-revolver-midwinter.jpg" alt="Joey Schroeder The Midwitner" /></a>
-                <a href="https://theapacherevolver.bandcamp.com/" target="_blank" title="Joey Schroeder The Morningstar"><img src="./static/joey-schroeder-music-apache-revolver-morningstar.jpg" alt="Joey Schroeder The Morningstar" /></a>
-                <a href="https://joeyschroeder.bandcamp.com/" target="_blank" title="Joey Schroeder The Surfer Moon"><img src="./static/joey-schroeder-music-surfer-moon.jpg" alt="Joey Schroeder The Surfer Moon" /></a>
-                <a href="https://joeyschroeder.bandcamp.com/" target="_blank" title="Joey Schroeder Nobody Does It Better"><img src="./static/joey-schroeder-music-nobody-does-it-better.jpg" alt="Joey Schroeder Nobody Does It Better" /></a>
-                <a href="https://joeyschroeder.bandcamp.com/" target="_blank" title="Joey Schroeder Take On Me"><img src="./static/joey-schroeder-music-take-on-me.jpg" alt="Joey Schroeder Nobody Take On Me" /></a>
-                <a href="https://joeyschroeder.bandcamp.com/" target="_blank" title="Joey Schroeder Surfer Girl"><img src="./static/joey-schroeder-music-surfer-girl.jpg" alt="Joey Schroeder Surfer Girl" /></a>
-                <a href="https://joeyschroeder.bandcamp.com/" target="_blank" title="Joey Schroeder Time After Time"><img src="./static/joey-schroeder-music-time-after-time.jpg" alt="Joey Schroeder Time After Time" /></a>
-                <a href="https://joeyschroeder.bandcamp.com/" target="_blank" title="Joey Schroeder Milwaukee Wisconsin"><img src="./static/joey-schroeder-milwaukee-wisconsin.jpg" alt="Joey Schroeder Milwaukee Wisconsin" /></a>
-            </div>
-            <div class="loader">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </body>
+      const handleAppReady = event => {
+        setTimeout(() => {
+          body.className = appReadyClass;
+        }, 100);
+        setTimeout(() => {
+          preBootstrapContainer.remove();
+          if (inlinedStyles) inlinedStyles.remove();
+        }, 900);
+      }
+
+      document.addEventListener('appReady', handleAppReady);
+    </script>
+    <div class="loader">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</body>
+
 </html>

@@ -1,5 +1,7 @@
 import CleanWebpackPlugin from 'clean-webpack-plugin';
 
-export default path => {
-    return { plugins: [ new CleanWebpackPlugin([path], { root: process.cwd() }) ] };
+export const clean = path => {
+  return {
+    plugins: [new CleanWebpackPlugin([path], { root: process.cwd() })]
+  };
 };
