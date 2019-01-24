@@ -1,0 +1,15 @@
+@import '../../styles/config/variables';
+@import '../../styles/mixins/font-size';
+@import '../../styles/mixins/line-height';
+
+.root {
+  @include font-size(4.8);
+  @include line-height(4.8);
+
+  margin: 0;
+  text-transform: uppercase;
+
+  .word {
+    display: inline-block;
+  }
+}
