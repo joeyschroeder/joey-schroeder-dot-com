@@ -16,17 +16,12 @@ $color-pinterest: #c92228;
 $color-twitter: #6cadde;
 
 // branding
-$color-primary: #326bab;
-$color-primary-light: lighten($color-primary, 27%);
-$color-primary-dark: darken($color-primary, 23%);
-$color-secondary: #969899;
-$color-secondary-light: lighten($color-secondary, 27%);
-$color-secondary-dark: darken($color-secondary, 30%);
-
-// component specific
-$color-background: lighten($color-secondary, 37%);
-$color-border: rgba($color-black, 0.1);
-$disabled-opacity: 0.4;
+$color-stripe-1: #febe26;
+$color-stripe-2: #fe672e;
+$color-stripe-3: #f23140;
+$color-stripe-4: #ce2968;
+$color-stripe-5: #701164;
+$color-background: #f7f3ed;
 
 /* typography
 **********************************************************/
@@ -72,8 +67,3 @@ $duration-base: 0.2s;
 
 // easing
 $ease-default: ease;
-
-html {
-  // adjust this value to control entire app REM size
-  // font-size: 63.75%;
-}
