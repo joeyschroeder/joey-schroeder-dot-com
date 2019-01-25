@@ -1,0 +1,14 @@
+@import '../../styles/config/variables';
+@import '../../styles/mixins/transition';
+
+.root {
+  @include transition(opacity);
+
+  background-color: rgba($color-black, 0.4);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10;
+}

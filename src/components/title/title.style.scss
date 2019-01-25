@@ -2,14 +2,33 @@
 @import '../../styles/mixins/font-size';
 @import '../../styles/mixins/line-height';
 
+@keyframes titleMove {
+  0% {
+    opacity: 0;
+    transform: translateY(-300%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
 .root {
   @include font-size(4.8);
   @include line-height(4.8);
 
-  margin: 0;
+  animation-delay: $duration-base;
+  animation-duration: $duration-base * 4;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+  animation-name: titleMove;
+  animation-timing-function: ease;
+  margin-bottom: $spacer * 2;
+  margin-top: 0;
   text-transform: uppercase;
 
-  .word {
+  .content {
     display: inline-block;
   }
 }

@@ -1,0 +1,47 @@
+@import '../../styles/config/variables';
+@import '../../styles/mixins/transition';
+@import '../../styles/mixins/font-size';
+@import '../../styles/mixins/line-height';
+
+.root {
+  @include font-size(1.8);
+  @include line-height(1.8);
+  @include transition(transform);
+
+  border-bottom-style: solid;
+  border-bottom-width: $border-width;
+  border-bottom-color: $color-stripe-1;
+  color: $color-white;
+  display: flex;
+  font-weight: $font-weight-light;
+  padding: $spacer * 2;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  @for $i from 1 through 10 {
+    &:nth-child(#{$i}) {
+      transition-delay: $i * $duration-base / 3;
+    }
+  }
+
+  &:nth-child(1) {
+    border-color: $color-stripe-4;
+  }
+
+  &:nth-child(2) {
+    border-color: $color-stripe-3;
+  }
+
+  &:nth-child(3) {
+    border-color: $color-stripe-2;
+  }
+
+  &:nth-child(4) {
+    border-color: $color-stripe-1;
+  }
+
+  @media screen and (max-width: $width-mobile) {
+    padding-top: $spacer * 1.5;
+    padding-bottom: $spacer * 1.5;
+  }
+}

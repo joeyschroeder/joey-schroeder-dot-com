@@ -11,8 +11,4 @@ body {
   font-family: $font-family-sans-serif;
   height: 100%;
   overflow: hidden;
-
-  @media print {
-    background: transparent;
-  }
 }

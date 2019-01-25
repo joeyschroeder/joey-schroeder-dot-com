@@ -1,7 +1,7 @@
 import OptimizeCSSAssetsPlugin from 'optimize-css-assets-webpack-plugin';
 import UglifyJsPlugin from 'uglifyjs-webpack-plugin';
-import { clean } from './webpack/clean';
 import { devServer } from './webpack/dev-server';
+import { getFavicons } from './webpack/get-favicons';
 import { getHtml } from './webpack/get-html';
 import { getSourcemaps } from './webpack/get-sourcemaps';
 import { loadFonts } from './webpack/load-fonts';
@@ -56,7 +56,7 @@ const outputConfig = {
   output: {
     filename: '[name]-[hash].js',
     path: ROOT_PATHS.dist,
-    publicPath: '/'
+    publicPath: './'
   }
 };
 
@@ -77,13 +77,13 @@ const optimizationConfig = {
 
 const commonConfig = merge([
   entryConfig,
-  getHtml({ title: 'React Redux SCSS Webpack Starter', template: path.join(ROOT_PATHS.src, 'index.html') }),
+  getHtml({ template: path.join(ROOT_PATHS.src, 'index.html') }),
   loadJs({ include: ROOT_PATHS.src, exclude: '/node_modules/', options: { cacheDirectory: true } })
 ]);
 
 const productionConfig = merge([
-  clean(ROOT_PATHS.dist),
   commonConfig,
+  getFavicons({ sourcePath: path.join(ROOT_PATHS.src, 'assets/images/favicon.png') }),
   loadFonts({ options: { limit: 5000, name: 'fonts/[name]-[hash].[ext]' } }),
   loadStyles({ production: true }),
   optimizationConfig,
@@ -96,7 +96,7 @@ const developmentConfig = merge([
   devServer({ host: 'localhost', port: 9090 }),
   getSourcemaps({ type: 'cheap-module-eval-source-map' }),
   loadFonts({ options: { name: '[name].[ext]' } }),
-  loadStyles({}),
+  loadStyles(),
   { output: { publicPath: '/' } }
 ]);
 

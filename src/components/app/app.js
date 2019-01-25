@@ -1,20 +1,21 @@
-import 'animate.css/animate.css';
 import 'normalize.css/normalize.css';
 import '../../styles/index.scss';
 
 import React, { Component } from 'react';
 
-import PropTypes from 'prop-types';
+import { Navigation } from '../navigation/navigation.component';
+import { Splash } from '../splash/splash.component';
 import styles from './app.style.scss';
 
 export class App extends Component {
-  static propTypes = {
-    children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node])
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      navigationActive: false
+    };
 
-  static defaultProps = {
-    children: null
-  };
+    this.toggleNavigation = this.toggleNavigation.bind(this);
+  }
 
   componentDidMount() {
     // When the app.js component mounts it fires an event called 'appReady'
@@ -26,9 +27,19 @@ export class App extends Component {
     document.dispatchEvent(event);
   }
 
-  render() {
-    const { children } = this.props;
+  toggleNavigation() {
+    const { navigationActive } = this.state;
+    this.setState({ navigationActive: !navigationActive });
+  }
 
-    return <div className={styles.root}>{children}</div>;
+  render() {
+    const { navigationActive } = this.state;
+
+    return (
+      <div className={styles.root}>
+        <Splash toggleNavigation={this.toggleNavigation} active={!navigationActive} />
+        <Navigation active={navigationActive} />
+      </div>
+    );
   }
 }

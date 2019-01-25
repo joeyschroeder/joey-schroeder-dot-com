@@ -3,17 +3,8 @@
 // base
 $color-black: #000;
 $color-blackType: #3a3a3a;
-$color-danger: #fe5b5c;
 $color-grey: lighten($color-blackType, 30%);
-$color-success: #a0cb4d;
-$color-warning: #fdb634;
 $color-white: #fff;
-
-// social
-$color-facebook: #3b5998;
-$color-google-plus: #f44336;
-$color-pinterest: #c92228;
-$color-twitter: #6cadde;
 
 // branding
 $color-stripe-1: #febe26;
@@ -63,7 +54,7 @@ $border-width-large: $border-width * 6;
 /* animations
 **********************************************************/
 // duration
-$duration-base: 0.2s;
+$duration-base: 0.3s;
 
 // easing
 $ease-default: ease;

@@ -1,6 +1,6 @@
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
-export const loadStyles = ({ production = false }) => {
+export const loadStyles = ({ production = false } = {}) => {
   const cssLoader = {
     loader: 'css-loader',
     options: {

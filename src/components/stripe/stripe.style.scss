@@ -1,0 +1,43 @@
+@import '../../styles/config/variables';
+
+@keyframes stripeMove {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.root {
+  animation-duration: $duration-base * 7;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+  animation-name: stripeMove;
+  animation-timing-function: ease;
+  background: $color-stripe-5;
+  height: $spacer * 2;
+
+  @for $i from 1 through 5 {
+    &:nth-child(#{$i}) {
+      animation-delay: $i * $duration-base / 3;
+    }
+  }
+
+  &:nth-child(1) {
+    background: $color-stripe-1;
+  }
+
+  &:nth-child(2) {
+    background: $color-stripe-2;
+  }
+
+  &:nth-child(3) {
+    background: $color-stripe-3;
+  }
+
+  &:nth-child(4) {
+    background: $color-stripe-4;
+  }
+}
