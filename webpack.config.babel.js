@@ -1,7 +1,6 @@
 import OptimizeCSSAssetsPlugin from 'optimize-css-assets-webpack-plugin';
 import UglifyJsPlugin from 'uglifyjs-webpack-plugin';
 import { devServer } from './webpack/dev-server';
-import { getFavicons } from './webpack/get-favicons';
 import { getHtml } from './webpack/get-html';
 import { getSourcemaps } from './webpack/get-sourcemaps';
 import { loadFonts } from './webpack/load-fonts';
