@@ -83,7 +83,6 @@ const commonConfig = merge([
 
 const productionConfig = merge([
   commonConfig,
-  getFavicons({ sourcePath: path.join(ROOT_PATHS.src, 'assets/images/favicon.png') }),
   loadFonts({ options: { limit: 5000, name: 'fonts/[name]-[hash].[ext]' } }),
   loadStyles({ production: true }),
   optimizationConfig,
