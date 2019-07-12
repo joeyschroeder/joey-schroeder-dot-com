@@ -21,6 +21,13 @@ export const Navigation = props => {
       <NavigationItem active={active} iconName="fab fa-github" href="https://github.com/joeyschroeder">
         GitHub
       </NavigationItem>
+      <NavigationItem
+        active={active}
+        iconName="fab fa-npm"
+        href="https://www.npmjs.com/settings/joeyschroeder/packages"
+      >
+        NPM
+      </NavigationItem>
       <NavigationItem active={active} iconName="fab fa-bandcamp" href="https://joeyschroeder.bandcamp.com">
         Bandcamp
       </NavigationItem>
