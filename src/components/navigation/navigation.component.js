@@ -24,7 +24,7 @@ export const Navigation = props => {
       <NavigationItem
         active={active}
         iconName="fab fa-npm"
-        href="https://www.npmjs.com/settings/joeyschroeder/packages"
+        href="https://www.npmjs.com/~joeyschroeder"
       >
         NPM
       </NavigationItem>
