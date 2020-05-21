@@ -1,5 +1,5 @@
-@import '../../styles/config/variables';
-@import '../../styles/mixins/transition';
+@import "../../styles/config/variables";
+@import "../../styles/mixins/transition";
 
 @keyframes navigationTogglePulse {
   0%,
@@ -44,7 +44,7 @@
 
     &::after {
       border-radius: 100%;
-      content: '';
+      content: "";
       height: $spacer;
       position: absolute;
       width: $spacer;

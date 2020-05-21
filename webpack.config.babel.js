@@ -77,7 +77,11 @@ const optimizationConfig = {
 const commonConfig = merge([
   entryConfig,
   getHtml({ template: path.join(ROOT_PATHS.src, 'index.html') }),
-  loadJs({ include: ROOT_PATHS.src, exclude: '/node_modules/', options: { cacheDirectory: true } })
+  loadJs({
+    include: ROOT_PATHS.src,
+    exclude: '/node_modules/',
+    options: { cacheDirectory: true }
+  })
 ]);
 
 const productionConfig = merge([

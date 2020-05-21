@@ -1,6 +1,7 @@
+import Autoprefixer from 'autoprefixer';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
-export const loadStyles = ({ production = false } = {}) => {
+export const loadStyles = ({ production = false }) => {
   const cssLoader = {
     loader: 'css-loader',
     options: {
@@ -13,7 +14,6 @@ export const loadStyles = ({ production = false } = {}) => {
     loader: 'css-loader',
     options: {
       importLoaders: 2,
-      localIdentName: '[name][local][hash:base64:5]',
       modules: true,
       sourceMap: !production
     }
@@ -22,7 +22,7 @@ export const loadStyles = ({ production = false } = {}) => {
   const postCssLoader = {
     loader: 'postcss-loader',
     options: {
-      plugins: () => [require('autoprefixer')],
+      plugins: [Autoprefixer],
       sourceMap: !production
     }
   };
@@ -39,11 +39,19 @@ export const loadStyles = ({ production = false } = {}) => {
       rules: [
         {
           test: /\.css$/,
-          use: [production ? MiniCssExtractPlugin.loader : 'style-loader', cssLoader]
+          use: [
+            production ? MiniCssExtractPlugin.loader : 'style-loader',
+            cssLoader
+          ]
         },
         {
           test: /\.scss$/,
-          use: [production ? MiniCssExtractPlugin.loader : 'style-loader', cssModulesLoader, postCssLoader, sassLoader]
+          use: [
+            production ? MiniCssExtractPlugin.loader : 'style-loader',
+            cssModulesLoader,
+            postCssLoader,
+            sassLoader
+          ]
         }
       ]
     },

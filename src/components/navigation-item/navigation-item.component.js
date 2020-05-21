@@ -36,7 +36,13 @@ export class NavigationItem extends Component {
     const style = this.getStyle();
 
     return (
-      <a className={styles.root} style={style} href={href} target="_blank" rel="noopener noreferrer">
+      <a
+        className={styles.root}
+        style={style}
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <div style={{ marginRight: '1rem' }}>
           <Icon className={iconName} />
         </div>

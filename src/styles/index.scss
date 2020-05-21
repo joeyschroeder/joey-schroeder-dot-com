@@ -1,10 +1,10 @@
 // fonts
-@import 'fonts/index';
+@import "fonts/index";
 
 :global {
   // config
-  @import 'config/reset';
+  @import "config/reset";
 
   // html elements
-  @import 'elements/body';
+  @import "elements/body";
 }

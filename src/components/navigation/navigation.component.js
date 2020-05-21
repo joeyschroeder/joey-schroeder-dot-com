@@ -15,10 +15,18 @@ export const Navigation = props => {
       >
         Résumé
       </NavigationItem>
-      <NavigationItem active={active} iconName="fab fa-linkedin" href="https://www.linkedin.com/in/joeyschroeder">
+      <NavigationItem
+        active={active}
+        iconName="fab fa-linkedin"
+        href="https://www.linkedin.com/in/joeyschroeder"
+      >
         LinkedIn
       </NavigationItem>
-      <NavigationItem active={active} iconName="fab fa-github" href="https://github.com/joeyschroeder">
+      <NavigationItem
+        active={active}
+        iconName="fab fa-github"
+        href="https://github.com/joeyschroeder"
+      >
         GitHub
       </NavigationItem>
       <NavigationItem
@@ -28,13 +36,25 @@ export const Navigation = props => {
       >
         NPM
       </NavigationItem>
-      <NavigationItem active={active} iconName="fab fa-bandcamp" href="https://joeyschroeder.bandcamp.com">
+      <NavigationItem
+        active={active}
+        iconName="fab fa-bandcamp"
+        href="https://joeyschroeder.bandcamp.com"
+      >
         Bandcamp
       </NavigationItem>
-      <NavigationItem active={active} iconName="fab fa-bandcamp" href="https://theapacherevolver.bandcamp.com">
+      <NavigationItem
+        active={active}
+        iconName="fab fa-bandcamp"
+        href="https://theapacherevolver.bandcamp.com"
+      >
         The Apache Revolver
       </NavigationItem>
-      <NavigationItem active={active} iconName="fab fa-bandcamp" href="https://computerjones.bandcamp.com">
+      <NavigationItem
+        active={active}
+        iconName="fab fa-bandcamp"
+        href="https://computerjones.bandcamp.com"
+      >
         Computer Jones
       </NavigationItem>
     </div>

@@ -5,7 +5,8 @@
 [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
 
 # 🌈 Joey Schroeder | Designer & Developer
-A simple JavaScript application designed to house my résumé, work, and projects!  View the application [here](http://joeyschroeder.com).
+
+A simple JavaScript application designed to house my résumé, work, and projects! View the application [here](http://joeyschroeder.com).
 
 [![JoeySchroeder.com](https://i.imgur.com/P4De99k.gif)](http://joeyschroeder.com)
 
@@ -15,4 +16,4 @@ This project is licensed under the MIT License - see the [MIT Open Source Initia
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
+- Hat tip to anyone who's code was used

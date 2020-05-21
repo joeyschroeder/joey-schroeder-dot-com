@@ -1,23 +1,12 @@
 {
-  "collectCoverageFrom": [
-    "src/**/*.js"
-  ],
-  "coverageReporters": [
-    "lcov",
-    "text"
-  ],
+  "collectCoverageFrom": ["src/**/*.js"],
+  "coverageReporters": ["lcov", "text"],
   "moduleNameMapper": {
     "\\.(css|less|scss|sass)$": "identity-obj-proxy"
   },
-  "setupFiles": [
-    "./test-setup.js"
-  ],
-  "testMatch": [
-    "**/?(*.)+(test).js"
-  ],
-  "testPathIgnorePatterns": [
-    "<rootDir>/node_modules/"
-  ],
+  "setupFiles": ["./test-setup.js"],
+  "testMatch": ["**/?(*.)+(test).js"],
+  "testPathIgnorePatterns": ["<rootDir>/node_modules/"],
   "transform": {
     "^.+\\.js$": "babel-jest"
   }
