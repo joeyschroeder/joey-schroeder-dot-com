@@ -49,12 +49,12 @@ exports[`<App /> should render correctly 1`] = `
           <span
             className="content"
           >
-            Designer//
+            Developer//
           </span>
           <span
             className="content"
           >
-            Developer
+            Designer
           </span>
         </h2>
       </div>
@@ -66,26 +66,26 @@ exports[`<App /> should render correctly 1`] = `
         className="root"
       >
         <div
-          className="stripe"
+          className="root"
         />
         <div
-          className="stripe"
+          className="root"
         />
         <div
-          className="stripe"
+          className="root"
         />
         <div
-          className="stripe"
+          className="root"
         />
         <div
-          className="stripe"
+          className="root"
         />
       </div>
       <div
         className="root"
       >
         Copyright © 
-        2019
+        2020
         . 
         All Rights Totally Reserved.
       </div>
@@ -96,7 +96,7 @@ exports[`<App /> should render correctly 1`] = `
   >
     <a
       className="root"
-      href=""
+      href="./static/schroeder-joseph-web-developer-resume.pdf"
       rel="noopener noreferrer"
       style={
         Object {
@@ -129,7 +129,7 @@ exports[`<App /> should render correctly 1`] = `
     </a>
     <a
       className="root"
-      href=""
+      href="https://www.linkedin.com/in/joeyschroeder"
       rel="noopener noreferrer"
       style={
         Object {
@@ -162,7 +162,7 @@ exports[`<App /> should render correctly 1`] = `
     </a>
     <a
       className="root"
-      href=""
+      href="https://github.com/joeyschroeder"
       rel="noopener noreferrer"
       style={
         Object {
@@ -195,7 +195,40 @@ exports[`<App /> should render correctly 1`] = `
     </a>
     <a
       className="root"
-      href=""
+      href="https://www.npmjs.com/~joeyschroeder"
+      rel="noopener noreferrer"
+      style={
+        Object {
+          "transform": "translateX(100%)",
+        }
+      }
+      target="_blank"
+    >
+      <div
+        style={
+          Object {
+            "marginRight": "1rem",
+          }
+        }
+      >
+        <i
+          aria-hidden="true"
+          className="fab fa-npm"
+        />
+      </div>
+      <div
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        NPM
+      </div>
+    </a>
+    <a
+      className="root"
+      href="https://joeyschroeder.bandcamp.com"
       rel="noopener noreferrer"
       style={
         Object {
@@ -228,7 +261,7 @@ exports[`<App /> should render correctly 1`] = `
     </a>
     <a
       className="root"
-      href=""
+      href="https://theapacherevolver.bandcamp.com"
       rel="noopener noreferrer"
       style={
         Object {
@@ -261,7 +294,7 @@ exports[`<App /> should render correctly 1`] = `
     </a>
     <a
       className="root"
-      href=""
+      href="https://computerjones.bandcamp.com"
       rel="noopener noreferrer"
       style={
         Object {
