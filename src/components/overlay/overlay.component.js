@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { Component } from 'react';
 
 import PropTypes from 'prop-types';
@@ -6,12 +8,12 @@ import styles from './overlay.style.scss';
 export class Overlay extends Component {
   static propTypes = {
     active: PropTypes.bool,
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
   };
 
   static defaultProps = {
     active: false,
-    onClick: null
+    onClick: null,
   };
 
   getStyle() {

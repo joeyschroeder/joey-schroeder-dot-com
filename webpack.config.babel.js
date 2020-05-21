@@ -11,7 +11,7 @@ import path from 'path';
 
 const ROOT_PATHS = {
   dist: path.join(__dirname, 'dist'),
-  src: path.join(__dirname, 'src')
+  src: path.join(__dirname, 'src'),
 };
 
 const statConfig = {
@@ -43,20 +43,20 @@ const statConfig = {
     timings: true,
     usedExports: false,
     version: true,
-    warnings: false
-  }
+    warnings: false,
+  },
 };
 
 const entryConfig = {
-  entry: path.join(ROOT_PATHS.src, 'index.js')
+  entry: path.join(ROOT_PATHS.src, 'index.js'),
 };
 
 const outputConfig = {
   output: {
     filename: '[name]-[hash].js',
     path: ROOT_PATHS.dist,
-    publicPath: './'
-  }
+    publicPath: './',
+  },
 };
 
 const optimizationConfig = {
@@ -67,11 +67,11 @@ const optimizationConfig = {
         commons: {
           chunks: 'initial',
           name: 'vendor',
-          test: /[\\/]node_modules[\\/]/
-        }
-      }
-    }
-  }
+          test: /[\\/]node_modules[\\/]/,
+        },
+      },
+    },
+  },
 };
 
 const commonConfig = merge([
@@ -80,8 +80,8 @@ const commonConfig = merge([
   loadJs({
     include: ROOT_PATHS.src,
     exclude: '/node_modules/',
-    options: { cacheDirectory: true }
-  })
+    options: { cacheDirectory: true },
+  }),
 ]);
 
 const productionConfig = merge([
@@ -90,7 +90,7 @@ const productionConfig = merge([
   loadStyles({ production: true }),
   optimizationConfig,
   outputConfig,
-  statConfig
+  statConfig,
 ]);
 
 const developmentConfig = merge([
@@ -99,10 +99,10 @@ const developmentConfig = merge([
   getSourcemaps({ type: 'cheap-module-eval-source-map' }),
   loadFonts({ options: { name: '[name].[ext]' } }),
   loadStyles(),
-  { output: { publicPath: '/' } }
+  { output: { publicPath: '/' } },
 ]);
 
-export default mode => {
+export default (mode) => {
   process.env.BABEL_ENV = mode;
 
   if (mode === 'production') return merge(productionConfig, { mode });

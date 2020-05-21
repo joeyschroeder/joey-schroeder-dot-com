@@ -10,9 +10,9 @@ export const getHtml = ({ title, template }) => {
           collapseInlineTagWhitespace: true,
           collapseWhitespace: true,
           minifyCSS: true,
-          minifyJS: true
-        }
-      })
-    ]
+          minifyJS: true,
+        },
+      }),
+    ],
   };
 };

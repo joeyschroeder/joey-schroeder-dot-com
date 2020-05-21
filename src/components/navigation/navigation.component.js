@@ -1,9 +1,9 @@
-import { NavigationItem } from '../navigation-item/navigation-item.component';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { NavigationItem } from '../navigation-item/navigation-item.component';
 import styles from './navigation.style.scss';
 
-export const Navigation = props => {
+export const Navigation = (props) => {
   const { active } = props;
 
   return (
@@ -62,9 +62,9 @@ export const Navigation = props => {
 };
 
 Navigation.propTypes = {
-  active: PropTypes.bool
+  active: PropTypes.bool,
 };
 
 Navigation.defaultProps = {
-  active: false
+  active: false,
 };

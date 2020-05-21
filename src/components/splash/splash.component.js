@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
+import PropTypes from 'prop-types';
 import { Author } from '../author/author.component';
 import { Copyright } from '../copyright/copyright.component';
 import { NavigationToggle } from '../navigation-toggle/navigation-toggle.component';
 import { Overlay } from '../overlay/overlay.component';
-import PropTypes from 'prop-types';
 import { Stripes } from '../stripes/stripes.component';
 import { Title } from '../title/title.component';
 import styles from './splash.style.scss';
@@ -12,12 +12,12 @@ import styles from './splash.style.scss';
 export class Splash extends Component {
   static propTypes = {
     active: PropTypes.bool,
-    toggleNavigation: PropTypes.func
+    toggleNavigation: PropTypes.func,
   };
 
   static defaultProps = {
     active: true,
-    toggleNavigation: null
+    toggleNavigation: null,
   };
 
   getStyle() {

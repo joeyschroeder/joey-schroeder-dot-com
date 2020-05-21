@@ -1,9 +1,9 @@
-import { App } from './components/app/app';
 import { AppContainer } from 'react-hot-loader';
 import React from 'react';
 import { render } from 'react-dom';
+import { App } from './components/app/app';
 
-const init = Component =>
+const init = (Component) =>
   render(
     <AppContainer>
       <Component />

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
+import PropTypes from 'prop-types';
 import { CHILDREN_PROP_TYPE } from '../../constants/children-prop-type';
 import { Icon } from '../icon/icon.component';
-import PropTypes from 'prop-types';
 import styles from './navigation-item.style.scss';
 
 export class NavigationItem extends Component {
@@ -10,14 +10,14 @@ export class NavigationItem extends Component {
     active: PropTypes.bool,
     children: CHILDREN_PROP_TYPE,
     href: PropTypes.string,
-    iconName: PropTypes.string
+    iconName: PropTypes.string,
   };
 
   static defaultProps = {
     active: false,
     children: null,
     href: '',
-    iconName: ''
+    iconName: '',
   };
 
   getStyle() {

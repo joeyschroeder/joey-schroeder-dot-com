@@ -11,7 +11,7 @@ export class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      navigationActive: false
+      navigationActive: false,
     };
 
     this.toggleNavigation = this.toggleNavigation.bind(this);
@@ -21,7 +21,7 @@ export class App extends Component {
     // When the app.js component mounts it fires an event called 'appReady'
     const event = new CustomEvent('appReady', {
       bubbles: true,
-      cancelable: false
+      cancelable: false,
     });
 
     document.dispatchEvent(event);

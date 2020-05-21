@@ -230,10 +230,10 @@
         );
 
         var handleAppReady = function handleAppReady(event) {
-          setTimeout(function() {
+          setTimeout(function () {
             body.className = appReadyClass;
           }, 100);
-          setTimeout(function() {
+          setTimeout(function () {
             preBootstrapContainer.remove();
             if (inlinedStyles) inlinedStyles.remove();
           }, 900);
