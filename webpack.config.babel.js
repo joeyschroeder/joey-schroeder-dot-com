@@ -12,6 +12,7 @@ import { STATS_CONFIG } from './webpack/stats-config';
 import { loadFiles } from './webpack/load-files';
 import { NAVIGATION_ITEMS } from './src/constants/navigation-items';
 import { copyFiles } from './webpack/copy-files';
+import { getFavicons } from './webpack/get-favicons';
 
 const ROOT_PATHS = {
   dist: path.join(__dirname, 'docs'),
@@ -75,6 +76,9 @@ const productionConfig = merge([
   loadStyles({ production: true }),
   loadFonts({ options: { limit: 5000, name: 'fonts/[name].[ext]' } }),
   loadFiles({ options: { limit: 5000, name: 'files/[name].[ext]' } }),
+  getFavicons({
+    sourcePath: path.join(ROOT_PATHS.src, 'assets/images/favicon.png'),
+  }),
   commonConfig,
   STATS_CONFIG,
 ]);

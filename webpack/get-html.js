@@ -4,15 +4,16 @@ export const getHtml = ({ title, template, templateParameters }) => {
   return {
     plugins: [
       new HtmlWebpackPlugin({
-        template,
-        templateParameters,
-        title,
+        inject: true,
         minify: {
           collapseInlineTagWhitespace: true,
           collapseWhitespace: true,
           minifyCSS: true,
           minifyJS: true,
         },
+        template,
+        templateParameters,
+        title,
       }),
     ],
   };
