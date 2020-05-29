@@ -46,7 +46,7 @@ const optimizationConfig = {
 const commonConfig = merge([
   entryConfig,
   getHtml({
-    template: path.join(ROOT_PATHS.src, 'index.ejs'),
+    template: path.join(ROOT_PATHS.src, 'templates/main.ejs'),
     templateParameters: {
       description:
         'Joey Schroeder is a mobile and web application developer and designer with a passion for teaching.',
