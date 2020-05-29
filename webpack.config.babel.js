@@ -63,7 +63,7 @@ const commonConfig = merge([
 
 const productionConfig = merge([
   commonConfig,
-  loadFonts({ options: { limit: 5000, name: 'fonts/[name]-[hash].[ext]' } }),
+  loadFonts({ options: { limit: 5000, name: 'fonts/[name].[ext]' } }),
   loadStyles({ production: true }),
   optimizationConfig,
   outputConfig,
