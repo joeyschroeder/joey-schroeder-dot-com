@@ -72,6 +72,10 @@ const productionConfig = merge([
     from: path.join(ROOT_PATHS.src, 'assets/images/static'),
     to: path.join(ROOT_PATHS.dist, 'static'),
   }),
+  copyFiles({
+    from: path.join(__dirname, 'CNAME'),
+    to: ROOT_PATHS.dist,
+  }),
   optimizationConfig,
   loadStyles({ production: true }),
   loadFonts({ options: { limit: 5000, name: 'fonts/[name].[ext]' } }),
