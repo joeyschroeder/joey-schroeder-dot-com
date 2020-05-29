@@ -9,6 +9,7 @@ import { loadFonts } from './webpack/load-fonts';
 import { loadJs } from './webpack/load-js';
 import { loadStyles } from './webpack/load-styles';
 import { STATS_CONFIG } from './webpack/stats-config';
+import { loadFiles } from './webpack/load-files';
 
 const ROOT_PATHS = {
   dist: path.join(__dirname, 'docs'),
@@ -62,11 +63,12 @@ const commonConfig = merge([
 ]);
 
 const productionConfig = merge([
-  commonConfig,
-  loadFonts({ options: { limit: 5000, name: 'fonts/[name].[ext]' } }),
-  loadStyles({ production: true }),
-  optimizationConfig,
   outputConfig,
+  optimizationConfig,
+  loadStyles({ production: true }),
+  loadFonts({ options: { limit: 5000, name: 'fonts/[name].[ext]' } }),
+  loadFiles({ options: { limit: 5000, name: 'files/[name].[ext]' } }),
+  commonConfig,
   STATS_CONFIG,
 ]);
 
@@ -74,6 +76,7 @@ const developmentConfig = merge([
   commonConfig,
   devServer({ host: 'localhost', port: 9090 }),
   getSourcemaps({ type: 'cheap-module-eval-source-map' }),
+  loadFiles({ options: { name: '[name].[ext]' } }),
   loadFonts({ options: { name: '[name].[ext]' } }),
   loadStyles(),
   { output: { publicPath: '/' } },

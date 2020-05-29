@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { NavigationItem } from '../navigation-item/navigation-item.component';
 import styles from './navigation.style.scss';
+import resumePdf from '../../assets/pdfs/schroeder-joey-web-developer-designer-resume.pdf';
 
 export const Navigation = (props) => {
   const { active } = props;
@@ -10,53 +11,47 @@ export const Navigation = (props) => {
     <div className={styles.root}>
       <NavigationItem
         active={active}
-        href="./static/schroeder-joseph-web-developer-resume.pdf"
+        download="schroeder-joey-developer-designer-resume.pdf"
+        href={resumePdf}
         iconName="fas fa-file-pdf"
-      >
-        Résumé
-      </NavigationItem>
+        title="Résumé"
+      />
       <NavigationItem
         active={active}
-        iconName="fab fa-linkedin"
         href="https://www.linkedin.com/in/joeyschroeder"
-      >
-        LinkedIn
-      </NavigationItem>
+        iconName="fab fa-linkedin"
+        title="LinkedIn"
+      />
       <NavigationItem
         active={active}
-        iconName="fab fa-github"
         href="https://github.com/joeyschroeder"
-      >
-        GitHub
-      </NavigationItem>
+        iconName="fab fa-github"
+        title="GitHub"
+      />
       <NavigationItem
         active={active}
-        iconName="fab fa-npm"
         href="https://www.npmjs.com/~joeyschroeder"
-      >
-        NPM
-      </NavigationItem>
+        iconName="fab fa-npm"
+        title="NPM"
+      />
       <NavigationItem
         active={active}
-        iconName="fab fa-bandcamp"
         href="https://joeyschroeder.bandcamp.com"
-      >
-        Bandcamp
-      </NavigationItem>
+        iconName="fab fa-bandcamp"
+        title="Bandcamp"
+      />
       <NavigationItem
         active={active}
-        iconName="fab fa-bandcamp"
         href="https://theapacherevolver.bandcamp.com"
-      >
-        The Apache Revolver
-      </NavigationItem>
+        iconName="fab fa-bandcamp"
+        title="The Apache Revolver"
+      />
       <NavigationItem
         active={active}
-        iconName="fab fa-bandcamp"
         href="https://computerjones.bandcamp.com"
-      >
-        Computer Jones
-      </NavigationItem>
+        iconName="fab fa-bandcamp"
+        title="Computer Jones"
+      />
     </div>
   );
 };
