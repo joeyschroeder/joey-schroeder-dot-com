@@ -3,6 +3,7 @@ import React from 'react';
 import { NavigationItem } from '../navigation-item/navigation-item.component';
 import styles from './navigation.style.scss';
 import { NAVIGATION_ITEMS } from '../../constants/navigation-items';
+import resumePdf from '../../assets/pdfs/schroeder-joey-web-developer-designer-resume.pdf';
 
 export const Navigation = (props) => {
   const { active } = props;
@@ -22,7 +23,17 @@ export const Navigation = (props) => {
     );
   });
 
-  return <div className={styles.root}>{navigationItems}</div>;
+  return (
+    <div className={styles.root}>
+      <NavigationItem
+        download="schroeder-joey-developer-designer-resume.pdf"
+        href={resumePdf}
+        iconName="fas fa-file-pdf"
+        title="Résumé"
+      />
+      {navigationItems}
+    </div>
+  );
 };
 
 Navigation.propTypes = {

@@ -10,6 +10,7 @@ import { loadJs } from './webpack/load-js';
 import { loadStyles } from './webpack/load-styles';
 import { STATS_CONFIG } from './webpack/stats-config';
 import { loadFiles } from './webpack/load-files';
+import { NAVIGATION_ITEMS } from './src/constants/navigation-items';
 
 const ROOT_PATHS = {
   dist: path.join(__dirname, 'docs'),
@@ -50,6 +51,7 @@ const commonConfig = merge([
     templateParameters: {
       description:
         'Joey Schroeder is a mobile and web application developer and designer with a passion for teaching.',
+      navigationItems: NAVIGATION_ITEMS,
       url: 'https://joeyschroeder.com',
       siteName: 'JoeySchroeder.com',
     },

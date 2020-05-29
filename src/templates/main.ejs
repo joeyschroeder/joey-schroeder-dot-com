@@ -241,30 +241,20 @@
     </div>
     <!-- LINKS -->
     <nav>
-      <a
-        href="https://www.linkedin.com/in/joeyschroeder"
-        target="_blank"
-        rel="noopener noreferrer"
-        >LinkedIn</a
-      >
-      <a
-        href="https://github.com/joeyschroeder"
-        target="_blank"
-        rel="noopener noreferrer"
-        >GitHub</a
-      >
-      <a
-        href="https://joeyschroeder.bandcamp.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        >Bandcamp</a
-      >
-      <a
-        href="https://www.npmjs.com/settings/joeyschroeder/packages"
-        target="_blank"
-        rel="noopener noreferrer"
-        >NPM</a
-      >
+      <ul>
+        <% navigationItems.forEach((navigationItem) => { %>
+          <li>
+            <a
+              href="<%= navigationItem.href %>"
+              rel="noopener noreferrer"
+              target="_blank"
+              title="<%= navigationItem.title %>"
+            >
+              <%= navigationItem.title %>
+            </a>
+          </li>
+        <% }) %>
+      </ul>
     </nav>
     <div>
       <!-- ALBUMS -->

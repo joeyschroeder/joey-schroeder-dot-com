@@ -1,12 +1,4 @@
-import resumePdf from '../assets/pdfs/schroeder-joey-web-developer-designer-resume.pdf';
-
 export const NAVIGATION_ITEMS = [
-  {
-    download: 'schroeder-joey-developer-designer-resume.pdf',
-    href: resumePdf,
-    iconName: 'fas fa-file-pdf',
-    title: 'Résumé',
-  },
   {
     href: 'https://www.linkedin.com/in/joeyschroeder',
     iconName: 'fab fa-linkedin',
