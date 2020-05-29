@@ -1,11 +1,12 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-export const getHtml = ({ title, template }) => {
+export const getHtml = ({ title, template, templateParameters }) => {
   return {
     plugins: [
       new HtmlWebpackPlugin({
-        title,
         template,
+        templateParameters,
+        title,
         minify: {
           collapseInlineTagWhitespace: true,
           collapseWhitespace: true,
