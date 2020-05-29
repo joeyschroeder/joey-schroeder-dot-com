@@ -7,8 +7,8 @@ import styles from './navigation-item.style.scss';
 export class NavigationItem extends Component {
   static propTypes = {
     active: PropTypes.bool,
-    download: PropTypes.bool,
-    href: PropTypes.string,
+    download: PropTypes.string,
+    href: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     iconName: PropTypes.string,
     title: PropTypes.string,
   };

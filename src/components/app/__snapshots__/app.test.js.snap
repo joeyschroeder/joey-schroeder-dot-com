@@ -96,7 +96,8 @@ exports[`<App /> should render correctly 1`] = `
   >
     <a
       className="root"
-      href="./static/schroeder-joseph-web-developer-resume.pdf"
+      download="schroeder-joey-developer-designer-resume.pdf"
+      href="test-file-stub"
       rel="noopener noreferrer"
       style={
         Object {
@@ -104,6 +105,7 @@ exports[`<App /> should render correctly 1`] = `
         }
       }
       target="_blank"
+      title="Résumé"
     >
       <div
         style={
@@ -137,6 +139,7 @@ exports[`<App /> should render correctly 1`] = `
         }
       }
       target="_blank"
+      title="LinkedIn"
     >
       <div
         style={
@@ -170,6 +173,7 @@ exports[`<App /> should render correctly 1`] = `
         }
       }
       target="_blank"
+      title="GitHub"
     >
       <div
         style={
@@ -203,6 +207,7 @@ exports[`<App /> should render correctly 1`] = `
         }
       }
       target="_blank"
+      title="NPM"
     >
       <div
         style={
@@ -236,6 +241,7 @@ exports[`<App /> should render correctly 1`] = `
         }
       }
       target="_blank"
+      title="Bandcamp"
     >
       <div
         style={
@@ -269,6 +275,7 @@ exports[`<App /> should render correctly 1`] = `
         }
       }
       target="_blank"
+      title="The Apache Revolver"
     >
       <div
         style={
@@ -302,6 +309,7 @@ exports[`<App /> should render correctly 1`] = `
         }
       }
       target="_blank"
+      title="Computer Jones"
     >
       <div
         style={

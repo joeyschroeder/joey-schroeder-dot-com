@@ -1,0 +1,493 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Navigation /> should render correctly 1`] = `
+<div
+  className="root"
+>
+  <a
+    className="root"
+    download="schroeder-joey-developer-designer-resume.pdf"
+    href="test-file-stub"
+    rel="noopener noreferrer"
+    style={
+      Object {
+        "transform": "translateX(100%)",
+      }
+    }
+    target="_blank"
+    title="Résumé"
+  >
+    <div
+      style={
+        Object {
+          "marginRight": "1rem",
+        }
+      }
+    >
+      <i
+        aria-hidden="true"
+        className="fas fa-file-pdf"
+      />
+    </div>
+    <div
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      Résumé
+    </div>
+  </a>
+  <a
+    className="root"
+    href="https://www.linkedin.com/in/joeyschroeder"
+    rel="noopener noreferrer"
+    style={
+      Object {
+        "transform": "translateX(100%)",
+      }
+    }
+    target="_blank"
+    title="LinkedIn"
+  >
+    <div
+      style={
+        Object {
+          "marginRight": "1rem",
+        }
+      }
+    >
+      <i
+        aria-hidden="true"
+        className="fab fa-linkedin"
+      />
+    </div>
+    <div
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      LinkedIn
+    </div>
+  </a>
+  <a
+    className="root"
+    href="https://github.com/joeyschroeder"
+    rel="noopener noreferrer"
+    style={
+      Object {
+        "transform": "translateX(100%)",
+      }
+    }
+    target="_blank"
+    title="GitHub"
+  >
+    <div
+      style={
+        Object {
+          "marginRight": "1rem",
+        }
+      }
+    >
+      <i
+        aria-hidden="true"
+        className="fab fa-github"
+      />
+    </div>
+    <div
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      GitHub
+    </div>
+  </a>
+  <a
+    className="root"
+    href="https://www.npmjs.com/~joeyschroeder"
+    rel="noopener noreferrer"
+    style={
+      Object {
+        "transform": "translateX(100%)",
+      }
+    }
+    target="_blank"
+    title="NPM"
+  >
+    <div
+      style={
+        Object {
+          "marginRight": "1rem",
+        }
+      }
+    >
+      <i
+        aria-hidden="true"
+        className="fab fa-npm"
+      />
+    </div>
+    <div
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      NPM
+    </div>
+  </a>
+  <a
+    className="root"
+    href="https://joeyschroeder.bandcamp.com"
+    rel="noopener noreferrer"
+    style={
+      Object {
+        "transform": "translateX(100%)",
+      }
+    }
+    target="_blank"
+    title="Bandcamp"
+  >
+    <div
+      style={
+        Object {
+          "marginRight": "1rem",
+        }
+      }
+    >
+      <i
+        aria-hidden="true"
+        className="fab fa-bandcamp"
+      />
+    </div>
+    <div
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      Bandcamp
+    </div>
+  </a>
+  <a
+    className="root"
+    href="https://theapacherevolver.bandcamp.com"
+    rel="noopener noreferrer"
+    style={
+      Object {
+        "transform": "translateX(100%)",
+      }
+    }
+    target="_blank"
+    title="The Apache Revolver"
+  >
+    <div
+      style={
+        Object {
+          "marginRight": "1rem",
+        }
+      }
+    >
+      <i
+        aria-hidden="true"
+        className="fab fa-bandcamp"
+      />
+    </div>
+    <div
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      The Apache Revolver
+    </div>
+  </a>
+  <a
+    className="root"
+    href="https://computerjones.bandcamp.com"
+    rel="noopener noreferrer"
+    style={
+      Object {
+        "transform": "translateX(100%)",
+      }
+    }
+    target="_blank"
+    title="Computer Jones"
+  >
+    <div
+      style={
+        Object {
+          "marginRight": "1rem",
+        }
+      }
+    >
+      <i
+        aria-hidden="true"
+        className="fab fa-bandcamp"
+      />
+    </div>
+    <div
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      Computer Jones
+    </div>
+  </a>
+</div>
+`;
+
+exports[`<Navigation /> should render correctly 2`] = `
+<div
+  className="root"
+>
+  <a
+    className="root"
+    download="schroeder-joey-developer-designer-resume.pdf"
+    href="test-file-stub"
+    rel="noopener noreferrer"
+    style={
+      Object {
+        "transform": "translateX(100%)",
+      }
+    }
+    target="_blank"
+    title="Résumé"
+  >
+    <div
+      style={
+        Object {
+          "marginRight": "1rem",
+        }
+      }
+    >
+      <i
+        aria-hidden="true"
+        className="fas fa-file-pdf"
+      />
+    </div>
+    <div
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      Résumé
+    </div>
+  </a>
+  <a
+    className="root"
+    href="https://www.linkedin.com/in/joeyschroeder"
+    rel="noopener noreferrer"
+    style={
+      Object {
+        "transform": "translateX(0)",
+      }
+    }
+    target="_blank"
+    title="LinkedIn"
+  >
+    <div
+      style={
+        Object {
+          "marginRight": "1rem",
+        }
+      }
+    >
+      <i
+        aria-hidden="true"
+        className="fab fa-linkedin"
+      />
+    </div>
+    <div
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      LinkedIn
+    </div>
+  </a>
+  <a
+    className="root"
+    href="https://github.com/joeyschroeder"
+    rel="noopener noreferrer"
+    style={
+      Object {
+        "transform": "translateX(0)",
+      }
+    }
+    target="_blank"
+    title="GitHub"
+  >
+    <div
+      style={
+        Object {
+          "marginRight": "1rem",
+        }
+      }
+    >
+      <i
+        aria-hidden="true"
+        className="fab fa-github"
+      />
+    </div>
+    <div
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      GitHub
+    </div>
+  </a>
+  <a
+    className="root"
+    href="https://www.npmjs.com/~joeyschroeder"
+    rel="noopener noreferrer"
+    style={
+      Object {
+        "transform": "translateX(0)",
+      }
+    }
+    target="_blank"
+    title="NPM"
+  >
+    <div
+      style={
+        Object {
+          "marginRight": "1rem",
+        }
+      }
+    >
+      <i
+        aria-hidden="true"
+        className="fab fa-npm"
+      />
+    </div>
+    <div
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      NPM
+    </div>
+  </a>
+  <a
+    className="root"
+    href="https://joeyschroeder.bandcamp.com"
+    rel="noopener noreferrer"
+    style={
+      Object {
+        "transform": "translateX(0)",
+      }
+    }
+    target="_blank"
+    title="Bandcamp"
+  >
+    <div
+      style={
+        Object {
+          "marginRight": "1rem",
+        }
+      }
+    >
+      <i
+        aria-hidden="true"
+        className="fab fa-bandcamp"
+      />
+    </div>
+    <div
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      Bandcamp
+    </div>
+  </a>
+  <a
+    className="root"
+    href="https://theapacherevolver.bandcamp.com"
+    rel="noopener noreferrer"
+    style={
+      Object {
+        "transform": "translateX(0)",
+      }
+    }
+    target="_blank"
+    title="The Apache Revolver"
+  >
+    <div
+      style={
+        Object {
+          "marginRight": "1rem",
+        }
+      }
+    >
+      <i
+        aria-hidden="true"
+        className="fab fa-bandcamp"
+      />
+    </div>
+    <div
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      The Apache Revolver
+    </div>
+  </a>
+  <a
+    className="root"
+    href="https://computerjones.bandcamp.com"
+    rel="noopener noreferrer"
+    style={
+      Object {
+        "transform": "translateX(0)",
+      }
+    }
+    target="_blank"
+    title="Computer Jones"
+  >
+    <div
+      style={
+        Object {
+          "marginRight": "1rem",
+        }
+      }
+    >
+      <i
+        aria-hidden="true"
+        className="fab fa-bandcamp"
+      />
+    </div>
+    <div
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      Computer Jones
+    </div>
+  </a>
+</div>
+`;

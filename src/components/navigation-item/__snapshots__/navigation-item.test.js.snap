@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NavigationItem /> should render correctly 1`] = `
+<a
+  className="root"
+  href=""
+  rel="noopener noreferrer"
+  style={
+    Object {
+      "transform": "translateX(100%)",
+    }
+  }
+  target="_blank"
+  title=""
+>
+  <div
+    style={
+      Object {
+        "marginRight": "1rem",
+      }
+    }
+  >
+    <i
+      aria-hidden="true"
+      className=""
+    />
+  </div>
+  <div
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    
+  </div>
+</a>
+`;

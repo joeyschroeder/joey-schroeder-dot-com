@@ -2,7 +2,8 @@
   "collectCoverageFrom": ["src/**/*.js"],
   "coverageReporters": ["lcov", "text"],
   "moduleNameMapper": {
-    "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    "\\.(css|scss)$": "identity-obj-proxy",
+    "\\.(pdf)$": "<rootDir>/mocks/file-mock.js"
   },
   "setupFiles": ["./test-setup.js"],
   "testMatch": ["**/?(*.)+(test).js"],
