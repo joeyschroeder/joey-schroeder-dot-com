@@ -26,6 +26,7 @@ export const Navigation = (props) => {
   return (
     <div className={styles.root}>
       <NavigationItem
+        active={active}
         download="schroeder-joey-developer-designer-resume.pdf"
         href={resumePdf}
         iconName="fas fa-file-pdf"
