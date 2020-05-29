@@ -6,9 +6,9 @@
 
 # 🌈 Joey Schroeder | Designer & Developer
 
-A simple JavaScript application designed to house my résumé, work, and projects! View the application [here](http://joeyschroeder.com).
+A simple JavaScript application designed to house my résumé, work, and projects! View the application [here](https://joeyschroeder.com).
 
-[![JoeySchroeder.com](https://i.imgur.com/P4De99k.gif)](http://joeyschroeder.com)
+[![JoeySchroeder.com](https://i.imgur.com/P4De99k.gif)](https://joeyschroeder.com)
 
 ## License
 
