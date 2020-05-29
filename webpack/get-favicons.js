@@ -9,15 +9,15 @@ export const getFavicons = ({ sourcePath }) => {
         emitStats: false,
         inject: true, // Inject the html into the html-webpack-plugin
         persistentCache: true,
-        prefix: '/',
+        prefix: './icons/',
         favicons: {
           icons: {
-            android: true,
-            appleIcon: true,
-            appleStartup: true,
+            android: false,
+            appleIcon: false,
+            appleStartup: false,
             coast: false,
             favicons: true,
-            firefox: true,
+            firefox: false,
             windows: false,
             yandex: false,
           },

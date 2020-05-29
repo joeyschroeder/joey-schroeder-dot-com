@@ -5,7 +5,7 @@
   "main": "./src/index.js",
   "scripts": {
     "build": "./node_modules/.bin/webpack --env production",
-    "clean": "rm -rf dist/ && echo \"\\x1b[102m\\x1b[1m CLEAN \\x1b[0m\" docs directory removed",
+    "clean": "rm -rf docs/ && echo \"\\x1b[102m\\x1b[1m CLEAN \\x1b[0m\" docs directory removed",
     "coverage": "./node_modules/.bin/jest --config ./jest.config.json --coverage",
     "eslint": "./node_modules/.bin/eslint src/ && echo \"\\x1b[102m\\x1b[1m ESLINT \\x1b[0m\" No JavaScript ESLint errors to fix",
     "eslint:fix": "./node_modules/.bin/eslint --fix src/ && echo \"\\x1b[102m\\x1b[1m ESLINT \\x1b[0m\" ESLint JavaScript errors fixed",
