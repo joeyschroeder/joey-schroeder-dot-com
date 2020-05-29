@@ -11,7 +11,7 @@ import { loadStyles } from './webpack/load-styles';
 import { STATS_CONFIG } from './webpack/stats-config';
 
 const ROOT_PATHS = {
-  dist: path.join(__dirname, 'dist'),
+  dist: path.join(__dirname, 'docs'),
   src: path.join(__dirname, 'src'),
 };
 
