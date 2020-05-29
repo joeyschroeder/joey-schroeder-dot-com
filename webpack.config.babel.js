@@ -11,6 +11,7 @@ import { loadStyles } from './webpack/load-styles';
 import { STATS_CONFIG } from './webpack/stats-config';
 import { loadFiles } from './webpack/load-files';
 import { NAVIGATION_ITEMS } from './src/constants/navigation-items';
+import { copyFiles } from './webpack/copy-files';
 
 const ROOT_PATHS = {
   dist: path.join(__dirname, 'docs'),
@@ -66,6 +67,10 @@ const commonConfig = merge([
 
 const productionConfig = merge([
   outputConfig,
+  copyFiles({
+    from: path.join(ROOT_PATHS.src, 'assets/images/static'),
+    to: path.join(ROOT_PATHS.dist, 'static'),
+  }),
   optimizationConfig,
   loadStyles({ production: true }),
   loadFonts({ options: { limit: 5000, name: 'fonts/[name].[ext]' } }),
