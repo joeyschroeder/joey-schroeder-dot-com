@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @import "../../styles/config/variables";
 @import "../../styles/mixins/transition";
 @import "../../styles/mixins/font-size";
@@ -20,7 +22,7 @@
 
   @for $i from 1 through 10 {
     &:nth-child(#{$i}) {
-      transition-delay: $i * $duration-base / 3;
+      transition-delay: $i * math.div($duration-base, 3);
     }
   }
 
