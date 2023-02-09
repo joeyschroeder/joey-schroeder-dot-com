@@ -12,7 +12,14 @@ export function Navigation(props) {
     const { download, href, iconName, title } = navigatonItem;
 
     return (
-      <NavigationItem active={active} download={download} href={href} iconName={iconName} key={title} title={title} />
+      <NavigationItem
+        active={active}
+        download={download}
+        href={href}
+        iconName={iconName}
+        key={title}
+        title={title}
+      />
     );
   });
 

@@ -37,7 +37,6 @@
       1,
       {
         "endOfLine": "auto",
-        "printWidth": 120,
         "singleQuote": true
       }
     ],
