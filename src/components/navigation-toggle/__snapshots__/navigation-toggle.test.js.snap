@@ -9,8 +9,5 @@ exports[`<NavigationToggle /> should render correctly 1`] = `
   <span />
   <span />
   <span />
-  <span />
-  <span />
-  <span />
 </button>
 `;
