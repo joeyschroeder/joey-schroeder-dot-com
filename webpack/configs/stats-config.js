@@ -1,3 +1,4 @@
+/* A configuration object for the webpack-bundle-analyzer plugin. */
 export const STATS_CONFIG = {
   stats: {
     all: undefined,
@@ -17,7 +18,6 @@ export const STATS_CONFIG = {
     errorDetails: true,
     errors: true,
     hash: true,
-    maxModules: 15,
     modules: false,
     performance: true,
     providedExports: false,

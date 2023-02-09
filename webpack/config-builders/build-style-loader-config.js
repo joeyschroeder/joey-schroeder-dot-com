@@ -1,7 +1,12 @@
-import Autoprefixer from 'autoprefixer';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
-export const loadStyles = ({ production = false } = {}) => {
+/**
+ * It returns a webpack config object that contains a module rule for both CSS and
+ * SCSS files, and a MiniCssExtractPlugin instance
+ * @param [production=false] - boolean - whether or not we're in production mode
+ * @returns An object with a module property and a plugins property.
+ */
+export const buildStyleLoaderConfig = (production = false) => {
   const cssLoader = {
     loader: 'css-loader',
     options: {
@@ -14,7 +19,11 @@ export const loadStyles = ({ production = false } = {}) => {
     loader: 'css-loader',
     options: {
       importLoaders: 2,
-      modules: true,
+      modules: {
+        localIdentName: production
+          ? '[contenthash:base64:5]'
+          : '[name][local][contenthash:base64:5]',
+      },
       sourceMap: !production,
     },
   };
@@ -22,16 +31,16 @@ export const loadStyles = ({ production = false } = {}) => {
   const postCssLoader = {
     loader: 'postcss-loader',
     options: {
-      plugins: [Autoprefixer],
+      postcssOptions: {
+        plugins: ['autoprefixer'],
+      },
       sourceMap: !production,
     },
   };
 
   const sassLoader = {
     loader: 'sass-loader',
-    options: {
-      sourceMap: !production,
-    },
+    options: { sourceMap: !production },
   };
 
   return {
@@ -57,8 +66,8 @@ export const loadStyles = ({ production = false } = {}) => {
     },
     plugins: [
       new MiniCssExtractPlugin({
-        filename: '[name]-[hash].css',
-        chunkFilename: '[id]-[hash].css',
+        chunkFilename: '[name]-[id].css?v=[contenthash]',
+        filename: '[name].css?v=[contenthash]',
       }),
     ],
   };
