@@ -5,7 +5,7 @@ export const loadFiles = ({ options } = {}) => {
         {
           test: /\.(png|jpe?g|gif|pdf)$/i,
           use: {
-            loader: 'url-loader',
+            loader: "url-loader",
             options,
           },
         },

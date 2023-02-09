@@ -1,4 +1,4 @@
-import CopyPlugin from 'copy-webpack-plugin';
+import CopyPlugin from "copy-webpack-plugin";
 
 export const copyFiles = ({ from, to } = {}) => {
   return {

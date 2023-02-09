@@ -1,9 +1,9 @@
-import Autoprefixer from 'autoprefixer';
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import Autoprefixer from "autoprefixer";
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
 export const loadStyles = ({ production = false } = {}) => {
   const cssLoader = {
-    loader: 'css-loader',
+    loader: "css-loader",
     options: {
       modules: false,
       sourceMap: false,
@@ -11,7 +11,7 @@ export const loadStyles = ({ production = false } = {}) => {
   };
 
   const cssModulesLoader = {
-    loader: 'css-loader',
+    loader: "css-loader",
     options: {
       importLoaders: 2,
       modules: true,
@@ -20,7 +20,7 @@ export const loadStyles = ({ production = false } = {}) => {
   };
 
   const postCssLoader = {
-    loader: 'postcss-loader',
+    loader: "postcss-loader",
     options: {
       plugins: [Autoprefixer],
       sourceMap: !production,
@@ -28,7 +28,7 @@ export const loadStyles = ({ production = false } = {}) => {
   };
 
   const sassLoader = {
-    loader: 'sass-loader',
+    loader: "sass-loader",
     options: {
       sourceMap: !production,
     },
@@ -40,14 +40,14 @@ export const loadStyles = ({ production = false } = {}) => {
         {
           test: /\.css$/,
           use: [
-            production ? MiniCssExtractPlugin.loader : 'style-loader',
+            production ? MiniCssExtractPlugin.loader : "style-loader",
             cssLoader,
           ],
         },
         {
           test: /\.scss$/,
           use: [
-            production ? MiniCssExtractPlugin.loader : 'style-loader',
+            production ? MiniCssExtractPlugin.loader : "style-loader",
             cssModulesLoader,
             postCssLoader,
             sassLoader,
@@ -57,8 +57,8 @@ export const loadStyles = ({ production = false } = {}) => {
     },
     plugins: [
       new MiniCssExtractPlugin({
-        filename: '[name]-[hash].css',
-        chunkFilename: '[id]-[hash].css',
+        filename: "[name]-[hash].css",
+        chunkFilename: "[id]-[hash].css",
       }),
     ],
   };

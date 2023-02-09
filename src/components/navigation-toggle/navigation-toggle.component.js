@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styles from './navigation-toggle.style.scss';
 
-export const NavigationToggle = (props) => {
+export function NavigationToggle(props) {
   const { onClick } = props;
 
   return (
@@ -15,7 +15,7 @@ export const NavigationToggle = (props) => {
       <span />
     </button>
   );
-};
+}
 
 NavigationToggle.propTypes = {
   onClick: PropTypes.func,

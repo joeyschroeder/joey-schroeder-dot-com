@@ -5,7 +5,7 @@ export const loadJs = ({ include, exclude, options } = {}) => {
         {
           exclude,
           include,
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options,
           test: /\.js$/,
         },

@@ -37,10 +37,7 @@ export class App extends Component {
 
     return (
       <div className={styles.root}>
-        <Splash
-          toggleNavigation={this.toggleNavigation}
-          active={!navigationActive}
-        />
+        <Splash toggleNavigation={this.toggleNavigation} active={!navigationActive} />
         <Navigation active={navigationActive} />
       </div>
     );

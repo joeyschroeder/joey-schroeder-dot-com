@@ -3,10 +3,10 @@ import '@fortawesome/fontawesome-free/css/all.css';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-export const Icon = (props) => {
+export function Icon(props) {
   const { className } = props;
   return <i className={className} aria-hidden="true" />;
-};
+}
 
 Icon.propTypes = {
   className: PropTypes.string,

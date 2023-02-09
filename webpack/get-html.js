@@ -1,6 +1,11 @@
-import HtmlWebpackPlugin from 'html-webpack-plugin';
+import HtmlWebpackPlugin from "html-webpack-plugin";
 
-export const getHtml = ({ title, template, templateParameters, faviconPath }) => {
+export const getHtml = ({
+  title,
+  template,
+  templateParameters,
+  faviconPath,
+}) => {
   return {
     plugins: [
       new HtmlWebpackPlugin({

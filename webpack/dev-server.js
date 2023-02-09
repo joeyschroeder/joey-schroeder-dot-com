@@ -1,5 +1,5 @@
-import path from 'path';
-import webpack from 'webpack';
+import path from "path";
+import webpack from "webpack";
 
 export const devServer = ({ host, port }) => {
   return {
@@ -9,10 +9,10 @@ export const devServer = ({ host, port }) => {
       open: false,
       overlay: true,
       port,
-      stats: 'errors-only',
+      stats: "errors-only",
     },
     plugins: [
-      new webpack.WatchIgnorePlugin([path.join(__dirname, 'node_modules')]),
+      new webpack.WatchIgnorePlugin([path.join(__dirname, "node_modules")]),
       new webpack.NamedModulesPlugin(),
     ],
   };
