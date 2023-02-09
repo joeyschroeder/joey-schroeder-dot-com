@@ -10,9 +10,6 @@ export function NavigationToggle(props) {
       <span />
       <span />
       <span />
-      <span />
-      <span />
-      <span />
     </button>
   );
 }
