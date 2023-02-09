@@ -5,7 +5,7 @@ import styles from './navigation.style.scss';
 import { NAVIGATION_ITEMS } from '../../constants/navigation-items';
 import resumePdf from '../../assets/pdfs/schroeder-joey-web-developer-designer-resume.pdf';
 
-export const Navigation = (props) => {
+export function Navigation(props) {
   const { active } = props;
 
   const navigationItems = NAVIGATION_ITEMS.map((navigatonItem) => {
@@ -35,7 +35,7 @@ export const Navigation = (props) => {
       {navigationItems}
     </div>
   );
-};
+}
 
 Navigation.propTypes = {
   active: PropTypes.bool,

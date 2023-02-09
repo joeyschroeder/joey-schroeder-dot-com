@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @import "../../styles/config/variables";
 
 @keyframes stripeMove {
@@ -21,7 +23,7 @@
 
   @for $i from 1 through 5 {
     &:nth-child(#{$i}) {
-      animation-delay: $i * $duration-base / 3;
+      animation-delay: $i * math.div($duration-base, 3);
     }
   }
 

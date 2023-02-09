@@ -30,9 +30,6 @@ exports[`<App /> should render correctly 1`] = `
       <span />
       <span />
       <span />
-      <span />
-      <span />
-      <span />
     </button>
     <div
       className="section"
@@ -85,7 +82,7 @@ exports[`<App /> should render correctly 1`] = `
         className="root"
       >
         Copyright © 
-        2020
+        2023
         . 
         All Rights Totally Reserved.
       </div>

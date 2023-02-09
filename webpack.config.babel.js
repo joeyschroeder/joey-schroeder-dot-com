@@ -1,105 +1,95 @@
-import OptimizeCSSAssetsPlugin from 'optimize-css-assets-webpack-plugin';
-import UglifyJsPlugin from 'uglifyjs-webpack-plugin';
 import merge from 'webpack-merge';
 import path from 'path';
-import { devServer } from './webpack/dev-server';
-import { getHtml } from './webpack/get-html';
-import { getSourcemaps } from './webpack/get-sourcemaps';
-import { loadFonts } from './webpack/load-fonts';
-import { loadJs } from './webpack/load-js';
-import { loadStyles } from './webpack/load-styles';
-import { STATS_CONFIG } from './webpack/stats-config';
-import { loadFiles } from './webpack/load-files';
 import { NAVIGATION_ITEMS } from './src/constants/navigation-items';
-import { copyFiles } from './webpack/copy-files';
-import { getFavicons } from './webpack/get-favicons';
+import { buildCopyFilesConfig } from './webpack/config-builders/build-copy-files-config';
+import { COMPRESS_ASSETS_CONFIG } from './webpack/configs/compress-assets-config';
+import { DEVELOPMENT_OUTPUT_CONFIG } from './webpack/configs/development-output-config';
+import { DEVTOOL_CONFIG } from './webpack/configs/devtool-config';
+import { JAVASCRIPT_LOADER_CONFIG } from './webpack/configs/javascript-loader-config';
+import { OPTIMIZATION_CONFIG } from './webpack/configs/optimization-config';
+import { STATS_CONFIG } from './webpack/configs/stats-config';
+import { buildCleanConfig } from './webpack/config-builders/build-clean-config';
+import { buildDevServerConfig } from './webpack/config-builders/build-dev-server-config';
+import { buildFileLoaderConfig } from './webpack/config-builders/build-file-loader-config';
+import { buildFontLoaderConfig } from './webpack/config-builders/build-font-loader-config';
+import { buildHtmlConfig } from './webpack/config-builders/build-html-config';
+import { buildStyleLoaderConfig } from './webpack/config-builders/build-style-loader-config';
+import { POLYFILLS_CONFIG } from './webpack/configs/polyfills-config';
+import { ALBUMS } from './src/constants/albums';
 
 const ROOT_PATHS = {
   dist: path.join(__dirname, 'docs'),
   src: path.join(__dirname, 'src'),
 };
 
-const entryConfig = {
-  entry: path.join(ROOT_PATHS.src, 'index.js'),
-};
+const ENTRY_CONFIG = { entry: path.join(ROOT_PATHS.src, 'index.js') };
 
-const outputConfig = {
+const OUTPUT_CONFIG = {
   output: {
-    filename: '[name]-[hash].js',
+    filename: '[name].js?v=[contenthash]',
     path: ROOT_PATHS.dist,
     publicPath: './',
   },
 };
 
-const optimizationConfig = {
-  optimization: {
-    minimizer: [new OptimizeCSSAssetsPlugin(), new UglifyJsPlugin()],
-    splitChunks: {
-      cacheGroups: {
-        commons: {
-          chunks: 'initial',
-          name: 'vendor',
-          test: /[\\/]node_modules[\\/]/,
-        },
-      },
-    },
-  },
-};
-
-const commonConfig = merge([
-  entryConfig,
-  getHtml({
-    template: path.join(ROOT_PATHS.src, 'templates/main.ejs'),
+const COMMON_CONFIG = merge([
+  ENTRY_CONFIG,
+  JAVASCRIPT_LOADER_CONFIG,
+  POLYFILLS_CONFIG,
+  buildHtmlConfig({
+    faviconPath: path.join(ROOT_PATHS.src, 'assets/images/favicon.png'),
+    templatePath: path.join(ROOT_PATHS.src, 'templates/app-preloader.html'),
     templateParameters: {
+      albums: ALBUMS,
       description:
         'Joey Schroeder is a mobile and web application developer and designer with a passion for teaching.',
       navigationItems: NAVIGATION_ITEMS,
-      url: 'https://joeyschroeder.com',
       siteName: 'JoeySchroeder.com',
+      url: 'https://joeyschroeder.com',
     },
     title: 'Joey Schroeder | Developer &amp; Designer',
   }),
-  loadJs({
-    include: ROOT_PATHS.src,
-    exclude: '/node_modules/',
-    options: { cacheDirectory: true },
-  }),
 ]);
 
-const productionConfig = merge([
-  outputConfig,
-  copyFiles({
+const DEVELOPMENT_CONFIG = merge([
+  COMMON_CONFIG,
+  DEVELOPMENT_OUTPUT_CONFIG,
+  DEVTOOL_CONFIG,
+  buildDevServerConfig(),
+  buildFontLoaderConfig(),
+  buildFileLoaderConfig(),
+  buildStyleLoaderConfig(),
+]);
+
+const PRODUCTION_CONFIG = merge([
+  COMMON_CONFIG,
+  COMPRESS_ASSETS_CONFIG,
+  OPTIMIZATION_CONFIG,
+  OUTPUT_CONFIG,
+  STATS_CONFIG,
+  buildCopyFilesConfig({
     from: path.join(ROOT_PATHS.src, 'assets/images/static'),
     to: path.join(ROOT_PATHS.dist, 'static'),
   }),
-  copyFiles({
+  buildCopyFilesConfig({
     from: path.join(__dirname, 'CNAME'),
     to: ROOT_PATHS.dist,
   }),
-  optimizationConfig,
-  loadStyles({ production: true }),
-  loadFonts({ options: { limit: 5000, name: 'fonts/[name].[ext]' } }),
-  loadFiles({ options: { limit: 5000, name: 'files/[name].[ext]' } }),
-  getFavicons({
-    sourcePath: path.join(ROOT_PATHS.src, 'assets/images/favicon.png'),
-  }),
-  commonConfig,
-  STATS_CONFIG,
+  buildCleanConfig(ROOT_PATHS.dist),
+  buildFontLoaderConfig({ filename: 'fonts/[name][ext]?v=[contenthash]' }),
+  buildFileLoaderConfig({ filename: 'files/[name][ext]' }),
+  buildStyleLoaderConfig(true),
 ]);
 
-const developmentConfig = merge([
-  commonConfig,
-  devServer({ host: 'localhost', port: 9090 }),
-  getSourcemaps({ type: 'cheap-module-eval-source-map' }),
-  loadFiles({ options: { name: '[name].[ext]' } }),
-  loadFonts({ options: { name: '[name].[ext]' } }),
-  loadStyles(),
-  { output: { publicPath: '/' } },
-]);
+// eslint-disable-next-line import/no-unused-modules
+export default ({ production = false, development = false } = {}) => {
+  let mode = 'none';
 
-export default (mode) => {
+  if (development) mode = 'development';
+  if (production) mode = 'production';
+
   process.env.BABEL_ENV = mode;
 
-  if (mode === 'production') return merge(productionConfig, { mode });
-  return merge(developmentConfig, { mode });
+  if (production) return merge(PRODUCTION_CONFIG, { mode });
+  return merge(DEVELOPMENT_CONFIG, { mode });
 };

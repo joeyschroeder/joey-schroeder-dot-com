@@ -257,7 +257,7 @@ exports[`<Navigation /> should render correctly 2`] = `
     rel="noopener noreferrer"
     style={
       Object {
-        "transform": "translateX(100%)",
+        "transform": "translateX(0)",
       }
     }
     target="_blank"

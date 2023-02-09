@@ -1,4 +1,6 @@
 import React from 'react';
 import styles from './stripe.style.scss';
 
-export const Stripe = () => <div className={styles.root} />;
+export function Stripe() {
+  return <div className={styles.root} />;
+}
