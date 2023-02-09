@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import PropTypes from 'prop-types';
 import { Author } from '../author/author.component';
@@ -9,47 +9,37 @@ import { Stripes } from '../stripes/stripes.component';
 import { Title } from '../title/title.component';
 import styles from './splash.style.scss';
 
-export class Splash extends Component {
-  static propTypes = {
-    active: PropTypes.bool,
-    toggleNavigation: PropTypes.func,
-  };
+export function Splash(props) {
+  const { active, toggleNavigation } = props;
+  const translateX = active ? 0 : '-50%';
+  const transform = `translateX(${translateX})`;
 
-  static defaultProps = {
-    active: true,
-    toggleNavigation: null,
-  };
+  const style = { transform };
 
-  getStyle() {
-    const { active } = this.props;
-
-    const translateX = active ? 0 : '-50%';
-    const transform = `translateX(${translateX})`;
-
-    const style = { transform };
-
-    return style;
-  }
-
-  render() {
-    const { active, toggleNavigation } = this.props;
-    const style = this.getStyle();
-
-    return (
-      <div className={styles.root} style={style}>
-        <Overlay active={!active} onClick={toggleNavigation} />
-        <NavigationToggle onClick={toggleNavigation} />
-        <div className={styles.section}>
-          <div>
-            <Author />
-            <Title />
-          </div>
-        </div>
-        <div className={styles.section}>
-          <Stripes />
-          <Copyright />
+  return (
+    <div className={styles.root} style={style}>
+      <Overlay active={!active} onClick={toggleNavigation} />
+      <NavigationToggle onClick={toggleNavigation} />
+      <div className={styles.section}>
+        <div>
+          <Author />
+          <Title />
         </div>
       </div>
-    );
-  }
+      <div className={styles.section}>
+        <Stripes />
+        <Copyright />
+      </div>
+    </div>
+  );
 }
+
+Splash.propTypes = {
+  active: PropTypes.bool,
+  toggleNavigation: PropTypes.func,
+};
+
+Splash.defaultProps = {
+  active: true,
+  toggleNavigation: null,
+};
