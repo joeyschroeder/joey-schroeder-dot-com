@@ -79,8 +79,6 @@ const PRODUCTION_CONFIG = merge([
   buildStyleLoaderConfig(true),
 ]);
 
-console.log('DEV CONFIG: ', JSON.stringify(DEVELOPMENT_CONFIG));
-
 // eslint-disable-next-line import/no-unused-modules
 export default ({ production = false, development = false } = {}) => {
   let mode = 'none';

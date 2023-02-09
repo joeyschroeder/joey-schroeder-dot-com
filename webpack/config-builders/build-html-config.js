@@ -19,7 +19,7 @@ export const buildHtmlConfig = ({
           minifyJS: true,
         },
         template: templatePath,
-        templateParameters: { templateParameters },
+        templateParameters,
         title,
       }),
     ],
