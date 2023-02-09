@@ -15,7 +15,8 @@
           "if",
           "include",
           "mixin",
-          "return"
+          "return",
+          "use"
         ]
       }
     ],
