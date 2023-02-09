@@ -265,24 +265,26 @@
     <% if (webpackConfig.mode === 'production') { %>
       <div>
         <!-- ALBUMS -->
-        <div itemscope itemtype="http://schema.org/MusicAlbum">
-          <span itemprop="name">The Midwinter</span>
-          <span itemprop="byArtist">Joey Schroeder</span>
-          <div itemscope itemtype="http://schema.org/ImageObject">
-            <a
-              href="https://theapacherevolver.bandcamp.com/"
-              target="_blank"
-              title="Joey Schroeder, The Midwinter"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="./static/joey-schroeder-music-apache-revolver-midwinter.jpg"
-                alt="Joey Schroeder, The Midwinter"
-                itemprop="contentUrl"
-              />
-            </a>
+        <% albums.forEach((album) => { %>
+          <div itemscope itemtype="http://schema.org/MusicAlbum">
+            <span itemprop="name"><%= album.name %></span>
+            <span itemprop="byArtist">Joey Schroeder</span>
+            <div itemscope itemtype="http://schema.org/ImageObject">
+              <a
+                href="<%= album.href %>"
+                target="_blank"
+                title="Joey Schroeder, <%= album.name %>"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="<%= album.imgSrc %>"
+                  alt="Joey Schroeder, <%= album.name %>"
+                  itemprop="contentUrl"
+                />
+              </a>
+            </div>
           </div>
-        </div>
+        <% }) %>
         <div itemscope itemtype="http://schema.org/MusicAlbum">
           <span itemprop="name">The Morningstar</span>
           <span itemprop="byArtist">Joey Schroeder</span>

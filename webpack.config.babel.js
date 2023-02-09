@@ -15,6 +15,7 @@ import { buildFontLoaderConfig } from './webpack/config-builders/build-font-load
 import { buildHtmlConfig } from './webpack/config-builders/build-html-config';
 import { buildStyleLoaderConfig } from './webpack/config-builders/build-style-loader-config';
 import { POLYFILLS_CONFIG } from './webpack/configs/polyfills-config';
+import { ALBUMS } from './src/constants/albums';
 
 const ROOT_PATHS = {
   dist: path.join(__dirname, 'docs'),
@@ -39,11 +40,12 @@ const COMMON_CONFIG = merge([
     faviconPath: path.join(ROOT_PATHS.src, 'assets/images/favicon.png'),
     templatePath: path.join(ROOT_PATHS.src, 'templates/app-preloader.html'),
     templateParameters: {
+      albums: ALBUMS,
       description:
         'Joey Schroeder is a mobile and web application developer and designer with a passion for teaching.',
       navigationItems: NAVIGATION_ITEMS,
-      url: 'https://joeyschroeder.com',
       siteName: 'JoeySchroeder.com',
+      url: 'https://joeyschroeder.com',
     },
     title: 'Joey Schroeder | Developer &amp; Designer',
   }),
